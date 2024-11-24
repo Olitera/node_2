@@ -233,3 +233,71 @@ Date and Time: 2024-11-24 17:34:00;
 Requested URL: /sum;
 Body of the Request: {"a":" 3","b":5}
 
+Date and Time: 2024-11-24 17:42:40;
+Requested URL: /sum;
+Body of the Request: {"a":3,"b":5}
+
+Date and Time: 2024-11-24 17:43:32;
+Requested URL: /sum;
+Body of the Request: {"a":3,"b":5}
+
+Date and Time: 2024-11-24 17:59:23;
+Requested URL: /articles/create;
+Body of the Request: {"title":"Exciting Article","text":"This is exciting article","date":90008888,"author":"Olitera","comments":[]}
+
+Date and Time: 2024-11-24 18:01:52;
+Requested URL: /;
+Body of the Request: null
+
+Date and Time: 2024-11-24 18:03:32;
+Requested URL: /articles/create;
+Body of the Request: {"title":"Exciting Article","text":"This is exciting article","date":1698230600000,"author":"Olitera","comments":[]}
+
+Date and Time: 2024-11-24 18:14:35;
+Requested URL: /articles/create;
+Body of the Request: {"title":"Exciting Article","text":"This is exciting article","date":1698230600000,"author":"Olitera","comments":[],"id":"2"}
+
+Date and Time: 2024-11-24 18:15:55;
+Requested URL: /articles/create;
+Body of the Request: {"title":"Exciting Article","text":"This is exciting article","date":1698230600000,"author":"Olitera","comments":[],"id":"2"}
+
+Date and Time: 2024-11-24 18:16:49;
+Requested URL: /articles/create;
+Body of the Request: {"title":"Exciting Article","text":"This is exciting article","date":1698230600000,"author":"Olitera","comments":[],"id":"3"}
+
+Date and Time: 2024-11-24 18:19:36;
+Requested URL: /articles/create;
+Body of the Request: {"title":"Exciting Article","text":"This is exciting article","author":"Olitera","comments":[]}
+
+Date and Time: 2024-11-24 18:21:16;
+Requested URL: /articles/create;
+Body of the Request: {"title":"Exciting Article","text":"This is exciting article","author":"Olitera","comments":[]}
+
+Date and Time: 2024-11-24 18:28:58;
+Requested URL: /articles/create;
+Body of the Request: {"title":"Exciting Article","text":"This is exciting article","author":"Olitera","comments":[]}
+
+Date and Time: 2024-11-24 18:32:51;
+Requested URL: /articles/create;
+Body of the Request: {"text":"This is exciting article","author":"Olitera","comments":[]}
+
+Date and Time: 2024-11-24 18:33:28;
+Requested URL: /articles/create;
+Body of the Request: {"title":"Exciting Article","text":"This is exciting article","author":"Olitera","comments":[]}
+
+Date and Time: 2024-11-24 18:34:10;
+Requested URL: /articles/create;
+Body of the Request: {"title":"Exciting Article","text":"This is exciting article","author":"Olitera","comments":[]}
+
+Date and Time: 2024-11-24 18:35:28;
+Requested URL: /articles/create;
+Body of the Request: {"title":"Exciting Article","text":"This is exciting article","author":"Olitera","comments":[]}
+
+Date and Time: 2024-11-24 18:38:36;
+Requested URL: /articles/create;
+Body of the Request: {"title":"Exciting Article","text":"This is exciting article","author":"Olitera","comments":[]}
+
+Date and Time: 2024-11-24 18:40:11;
+Requested URL: /articles/create;
+Body of the Request: {"title":"Exciting New Article","text":"This is exciting article","author":"Olitera","comments":[]}
+

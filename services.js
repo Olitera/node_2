@@ -18,4 +18,33 @@ function getArticles() {
   return articles;
 }
 
-module.exports = { loadArticles, getArticles };
+function createArticle(article) {
+  const newArticle = {
+    id: getNewArticleId(),
+    date: Date.now(),
+    ...article
+  };
+  articles.push(newArticle);
+
+  return newArticle;
+}
+
+function getNewArticleId() {
+  return String((+articles.toSorted((a, b) => {
+    return +b.id - +a.id;
+  })[0]?.id || 0) + 1);
+}
+
+function getArticle(id) {
+  return articles.find((item) => item.id === id);
+}
+
+function saveArticles() {
+  fs.writeFile('articles.json', JSON.stringify(articles, null, 2), (err) => {
+    if (err) {
+      console.error(err);
+    }
+  });
+}
+
+module.exports = { loadArticles, getArticles, createArticle, saveArticles };
