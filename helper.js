@@ -6,9 +6,12 @@ function parseBodyJSON(req, cb) {
   }).on('end', function () {
     body = Buffer.concat(body).toString();
 
-    let params = body ? JSON.parse(body) : null;
-
-    cb(null, params);
+    try {
+      let params = body ? JSON.parse(body) : null;
+      cb(null, params);
+    } catch {
+      cb({ code: 400, message: 'Request invalid' });
+    }
   });
 }
 

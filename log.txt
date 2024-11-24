@@ -1,201 +1,10 @@
-{
-  "date": "2024-11-24T15:36:03.866Z",
-  "url": "/articles/readall",
-  "body": null
-}
-
-{
-  "date": "2024-11-24T15:38:55.921Z",
-  "url": "/articles/readall",
-  "body": null
-}
-
-{
-  "date": "2024-11-24T16:00:28.518Z",
-  "url": "/articles/read",
-  "body": {
-    "id": "1"
-  }
-}
-
-{
-  "date": "2024-11-24T16:01:00.644Z",
-  "url": "/articles/read",
-  "body": {
-    "id": "1"
-  }
-}
-
-{
-  "date": "2024-11-24T16:11:16.938Z",
-  "url": "/articles/read",
-  "body": {
-    "id": "1"
-  }
-}
-
-{
-  "date": "2024-11-24T16:11:26.756Z",
-  "url": "/articles/read",
-  "body": {
-    "id": "2"
-  }
-}
-
-{
-  "date": "2024-11-24T16:12:14.318Z",
-  "url": "/articles/read",
-  "body": {
-    "id": "3"
-  }
-}
-
-{
-  "date": "2024-11-24T16:16:39.128Z",
-  "url": "/articles/read",
-  "body": {
-    "id": "3"
-  }
-}
-
-{
-  "date": "2024-11-24T16:17:22.825Z",
-  "url": "/articles/read",
-  "body": {
-    "id": "3"
-  }
-}
-
-{
-  "date": "2024-11-24T16:21:16.144Z",
-  "url": "/articles/read",
-  "body": {
-    "id": "3"
-  }
-}
-
-{
-  "date": "2024-11-24T16:22:01.419Z",
-  "url": "/articles/read",
-  "body": {
-    "id": "3"
-  }
-}
-
-{
-  "date": "2024-11-24T16:22:55.160Z",
-  "url": "/articles/read",
-  "body": {
-    "id": "3"
-  }
-}
-
-{
-  "date": "2024-11-24T16:46:12.119Z",
-  "url": "/articles/read",
-  "body": {
-    "id": "3"
-  }
-}
-
-{
-  "date": "2024-11-24T16:46:49.979Z",
-  "url": "/articles/read",
-  "body": {
-    "id": "1"
-  }
-}
-
-{
-  "date": "2024-11-24T16:46:58.522Z",
-  "url": "/articles/read",
-  "body": {
-    "id": "3"
-  }
-}
-
-{
-  "date": "2024-11-24T16:47:32.617Z",
-  "url": "/articles/read",
-  "body": {
-    "id": "3"
-  }
-}
-
-{
-  "date": "2024-11-24T16:48:36.277Z",
-  "url": "/articles/read",
-  "body": {
-    "id": "3"
-  }
-}
-
-{
-  "date": "2024-11-24T16:51:23.224Z",
-  "url": "/articles/read",
-  "body": null
-}
-
-{
-  "date": "2024-11-24T16:51:50.713Z",
-  "url": "/articles/read",
-  "body": {
-    "idg": 1
-  }
-}
-
-{
-  "date": "2024-11-24T16:54:51.766Z",
-  "url": "/articles/read",
-  "body": {
-    "idg": 1
-  }
-}
-
-{
-  "date": "2024-11-24T16:55:02.770Z",
-  "url": "/articles/read",
-  "body": {
-    "id": 1
-  }
-}
-
-{
-  "date": "2024-11-24T16:55:09.255Z",
-  "url": "/articles/read",
-  "body": {
-    "id": "1"
-  }
-}
-
-{
-  "date": "2024-11-24T16:55:14.864Z",
-  "url": "/articles/read",
-  "body": null
-}
-
-{
-  "date": "2024-11-24T16:55:25.738Z",
-  "url": "/articles/read",
-  "body": {
-    "id": "3"
-  }
-}
-
-2024-11-24T17:09:08.791Z Requested URL: /articles/read Body of the Request: {"id":"3"}
-
-2024-11-24T17:10:01.683Z Requested URL: /articles/read Body of the Request: {"id":"3","dfg":"676","sdfgf":678}
-
-Date and Time: 2024-11-24T17:12:45.023Z;     Requested URL: /articles/read;     Body of the Request: {"id":"3","dfg":"676","sdfgf":678}
-
-Date and Time: 2024-11-24T17:15:50.973Z;  
-Requested URL: /articles/read;  
+Date and Time: 2024-11-24T17:15:50.973Z;
+Requested URL: /articles/read;
 Body of the Request: {"id":"3","dfg":"676","sdfgf":"678"}
 
-Date and Time: 2024-11-24T17:17:18.833Z;  
-Requested URL: /articles/read;  
+Date and Time: 2024-11-24T17:17:18.833Z;
+Requested URL: /articles/read;
 Body of the Request: {"id":"1"}
-
 
 Date and Time: 2024-11-24T17:20:34.969Z;
 Requested URL: /articles/read;
@@ -448,4 +257,51 @@ Body of the Request: {"o":"104"}
 Date and Time: 2024-11-24 21:26:19;
 Requested URL: /comments/delete;
 Body of the Request: {"id":"1000000"}
+
+Date and Time: 2024-11-24 21:35:04;
+Requested URL: /comments/delete;
+Body of the Request: {"id":"102"}
+
+Date and Time: 2024-11-24 21:36:26;
+Requested URL: /comments/create;
+Body of the Request: {"articleId":"4","text":"New comment","author":"Kate"}
+
+Date and Time: 2024-11-24 21:37:08;
+Requested URL: /articles/readall;
+Body of the Request: {"articleId":"4","text":"New comment","author":"Kate"}
+
+Date and Time: 2024-11-24 21:37:56;
+Requested URL: /articles/read;
+Body of the Request: {"id":"7"}
+
+Date and Time: 2024-11-24 21:39:10;
+Requested URL: /articles/create;
+Body of the Request: {"title":"Exciting New Article","text":"This is exciting article","author":"Mora"}
+
+Date and Time: 2024-11-24 21:42:48;
+Requested URL: /articles/create;
+Body of the Request: {"title":"Exciting New Article","text":"This is exciting article","author":"Mora"}
+
+Date and Time: 2024-11-24 21:44:30;
+Requested URL: /articles/update;
+Body of the Request: {"id":"8","author":"Den"}
+
+Date and Time: 2024-11-24 21:48:46;
+Requested URL: /articles/delete;
+Body of the Request: {"id":"8"}
+
+Date and Time: 2024-11-24 21:48:53;
+Requested URL: /articles/delete;
+Body of the Request: undefined
+
+Date and Time: 2024-11-24 21:49:06;
+Requested URL: /articles/readall;
+Body of the Request: undefined
+Date and Time: 2024-11-24 21:51:01;
+Requested URL: /articles/readall;
+Body of the Request: undefined
+
+Date and Time: 2024-11-24 21:51:16;
+Requested URL: /articles/readall;
+Body of the Request: null
 

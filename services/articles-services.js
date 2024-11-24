@@ -39,8 +39,11 @@ function getNewArticleId() {
 function createArticle(article) {
   const newArticle = {
     id: getNewArticleId(),
+    title: article.title,
+    text: article.text,
     date: Date.now(),
-    ...article
+    author: article.author,
+    comments: []
   };
   articles.push(newArticle);
 

@@ -23,11 +23,11 @@
     "author": "Olitera",
     "comments": [
       {
-        "id": "102",
+        "id": "106",
         "articleId": "4",
         "text": "New comment",
-        "date": 1732482257294,
-        "author": "Mora"
+        "date": 1732484186841,
+        "author": "Kate"
       }
     ]
   },
@@ -69,5 +69,13 @@
         "author": "Greg"
       }
     ]
+  },
+  {
+    "id": "9",
+    "title": "Exciting New Article",
+    "text": "This is exciting article",
+    "date": 1732484568085,
+    "author": "Mora",
+    "comments": []
   }
 ]
