@@ -1,11 +1,11 @@
 const http = require('http');
-const fs = require('fs');
-const path = require('path');
 const helper = require('./helper');
-const articleController = require('./controllers/articles-controller');
+const articleReadallController = require('./controllers/articlesReadall-controller');
+const articleReadController = require('./controllers/articlesRead-controller');
 const sumController = require('./controllers/sum-controller');
 const notFoundController = require('./controllers/notFound-controller');
 const services = require('./services');
+const logger = require('./logger');
 
 
 const hostname = '127.0.0.1';
@@ -13,12 +13,13 @@ const port = 3000;
 
 const handlers = {
   '/sum': sumController.sum,
-  '/articles/readall': articleController.getArticles
+  '/articles/readall': articleReadallController.getArticles,
+  '/articles/read': articleReadController.getArticleById
 };
 
 const server = http.createServer((req, res) => {
   helper.parseBodyJSON(req, (err, payload) => {
-    logRequest(req, payload);
+    logger.logRequest(req, payload);
 
     const handler = getHandler(req.url);
 
@@ -38,29 +39,13 @@ const server = http.createServer((req, res) => {
   });
 });
 
-const logRequest = (req, body) => {
-  const logEntry = {
-    date: new Date().toISOString(),
-    url: req.url,
-    body
-  };
-
-  const formattedLog = `${JSON.stringify(logEntry, null, 2)}\n\n`;
-
-  fs.appendFile(path.join(__dirname, 'log.txt'), formattedLog, 'utf8', (err) => {
-    if (err) {
-      console.error('Failed to write to log file:',err);
-    }
-  });
-};
-
 let articles = [];
 
 services.loadArticles(startServer, { articles });
 
-function startServer () {
+function startServer() {
   server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+    console.log(`Server running at http://${ hostname }:${ port }/`);
   });
 }
 

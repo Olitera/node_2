@@ -1,7 +1,17 @@
 function sum(req, res, payload, cb) {
-  const result = { c: payload.a + payload.b };
+  try {
+    const { a, b } = payload;
 
-  cb(null, result);
+    if (!a || !b || typeof a !== 'number' || typeof b !== 'number') {
+      throw new Error('Request invalid');
+    }
+
+    const result = { c: a + b };
+
+    cb(null, result);
+  } catch (err) {
+    cb({ code: 400, message: 'Request invalid' });
+  }
 }
 
 module.exports = { sum };
