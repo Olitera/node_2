@@ -9,7 +9,7 @@ function loadArticles (cb) {
     }
 
     articles = JSON.parse(data);
-    console.log('Articles loaded:', articles);
+    console.log('Articles with comments loaded');
     cb(null, articles);
   });
 }

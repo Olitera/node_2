@@ -1,4 +1,6 @@
 const http = require('http');
+const fs = require('fs');
+const path = require('path');
 const helper = require('./helper');
 const articleController = require('./controllers/articles-controller');
 const sumController = require('./controllers/sum-controller');
@@ -16,6 +18,8 @@ const handlers = {
 
 const server = http.createServer((req, res) => {
   helper.parseBodyJSON(req, (err, payload) => {
+    logRequest(req, payload);
+
     const handler = getHandler(req.url);
 
     handler(req, res, payload, (err, result) => {
@@ -34,11 +38,27 @@ const server = http.createServer((req, res) => {
   });
 });
 
+const logRequest = (req, body) => {
+  const logEntry = {
+    date: new Date().toISOString(),
+    url: req.url,
+    body
+  };
+
+  const formattedLog = `${JSON.stringify(logEntry, null, 2)}\n\n`;
+
+  fs.appendFile(path.join(__dirname, 'log.txt'), formattedLog, 'utf8', (err) => {
+    if (err) {
+      console.error('Failed to write to log file:',err);
+    }
+  });
+};
+
 let articles = [];
 
 services.loadArticles(startServer, { articles });
 
-function startServer (err, payload) {
+function startServer () {
   server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
   });

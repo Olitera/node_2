@@ -6,7 +6,7 @@ function parseBodyJSON(req, cb) {
   }).on('end', function () {
     body = Buffer.concat(body).toString();
 
-    let params = body ? JSON.parse(body) : {};
+    let params = body ? JSON.parse(body) : null;
 
     cb(null, params);
   });
