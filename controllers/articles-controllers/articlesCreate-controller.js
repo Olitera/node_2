@@ -1,4 +1,4 @@
-const services = require('../services');
+const services = require('../../services/articles-services');
 
 function createArticle(req, res, payload) {
   res.setHeader('Content-Type', 'application/json');

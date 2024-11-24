@@ -1,13 +1,14 @@
 const http = require('http');
 const helper = require('./helper');
-const articleReadallController = require('./controllers/articlesReadall-controller');
-const articleReadController = require('./controllers/articlesRead-controller');
-const articleCreateController = require('./controllers/articlesCreate-controller');
-const articleUpdateController = require('./controllers/articlesUpdate-controller');
-const articleDeleteController = require('./controllers/articlesDelete-controller');
+const articleReadallController = require('./controllers/articles-controllers/articlesReadall-controller');
+const articleReadController = require('./controllers/articles-controllers/articlesRead-controller');
+const articleCreateController = require('./controllers/articles-controllers/articlesCreate-controller');
+const articleUpdateController = require('./controllers/articles-controllers/articlesUpdate-controller');
+const articleDeleteController = require('./controllers/articles-controllers/articlesDelete-controller');
+const commentCreateController = require('./controllers/comments-controllers/commentsCreate-controller');
 const sumController = require('./controllers/sum-controller');
 const notFoundController = require('./controllers/notFound-controller');
-const services = require('./services');
+const articlesServices = require('./services/articles-services');
 const logger = require('./logger');
 
 
@@ -20,7 +21,8 @@ const handlers = {
   '/articles/read': articleReadController.getArticleById,
   '/articles/create': articleCreateController.createArticle,
   '/articles/update': articleUpdateController.updateArticle,
-  '/articles/delete': articleDeleteController.deleteArticle
+  '/articles/delete': articleDeleteController.deleteArticle,
+  '/comments/create': commentCreateController.createComment
 };
 
 const server = http.createServer((req, res) => {
@@ -46,7 +48,7 @@ const server = http.createServer((req, res) => {
 
 let articles = [];
 
-services.loadArticles(startServer, { articles });
+articlesServices.loadArticles(startServer, { articles });
 
 function startServer() {
   server.listen(port, hostname, () => {

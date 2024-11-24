@@ -21,7 +21,15 @@
     "title": "Exciting Article",
     "text": "This is exciting article",
     "author": "Olitera",
-    "comments": []
+    "comments": [
+      {
+        "id": "102",
+        "articleId": "4",
+        "text": "New comment",
+        "date": 1732482257294,
+        "author": "Mora"
+      }
+    ]
   },
   {
     "id": "5",
@@ -45,6 +53,21 @@
     "title": "Exciting New Article",
     "text": "This is exciting article",
     "author": "Olitera",
-    "comments": []
+    "comments": [
+      {
+        "id": "103",
+        "articleId": "7",
+        "text": "New comment",
+        "date": 1732482295142,
+        "author": "Kate"
+      },
+      {
+        "id": "104",
+        "articleId": "7",
+        "text": "New comment",
+        "date": 1732482302707,
+        "author": "Greg"
+      }
+    ]
   }
 ]

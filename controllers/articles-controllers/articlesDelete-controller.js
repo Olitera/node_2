@@ -1,6 +1,6 @@
-const services = require('../services');
+const services = require('../../services/articles-services');
 
-function updateArticle(req, res, params) {
+function deleteArticle(req, res, params) {
   res.setHeader('Content-Type', 'application/json');
 
   try {
@@ -10,13 +10,14 @@ function updateArticle(req, res, params) {
       throw new Error('Request invalid');
     }
 
-    const article = services.updateArticle(id, params);
+    const article = services.getArticle(id);
 
     if (!article) {
       res.statusCode = 404;
       res.end(JSON.stringify({ code: 404, message: 'Article not found' }));
     } else {
-      res.end(JSON.stringify(article));
+      services.deleteArticle(id);
+      res.end(JSON.stringify({ code: 200, message: 'OK' }));
     }
   } catch (err) {
     res.statusCode = 400;
@@ -25,4 +26,4 @@ function updateArticle(req, res, params) {
   services.saveArticles();
 }
 
-module.exports = { updateArticle };
+module.exports = { deleteArticle };

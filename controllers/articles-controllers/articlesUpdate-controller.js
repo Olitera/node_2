@@ -1,28 +1,28 @@
-const services = require('../services');
+const services = require('../../services/articles-services');
 
-function getArticleById(req, res, params) {
+function updateArticle(req, res, params) {
   res.setHeader('Content-Type', 'application/json');
 
   try {
     const { id } = params;
 
     if (!id || typeof id !== 'string') {
-      throw new Error('Invalid id');
+      throw new Error('Request invalid');
     }
 
-    const articles = services.getArticles();
-    const article = articles.find((item) => item.id === id);
+    const article = services.updateArticle(id, params);
 
     if (!article) {
       res.statusCode = 404;
       res.end(JSON.stringify({ code: 404, message: 'Article not found' }));
+    } else {
+      res.end(JSON.stringify(article));
     }
-
-    res.end(JSON.stringify(article));
   } catch (err) {
     res.statusCode = 400;
     res.end(JSON.stringify({ code: 400, message: 'Request invalid' }));
   }
+  services.saveArticles();
 }
 
-module.exports = { getArticleById };
+module.exports = { updateArticle };

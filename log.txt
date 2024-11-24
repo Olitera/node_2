@@ -361,3 +361,75 @@ Date and Time: 2024-11-24 19:53:08;
 Requested URL: /articles/delete;
 Body of the Request: {"id":"555"}
 
+Date and Time: 2024-11-24 20:13:04;
+Requested URL: /comments/create;
+Body of the Request: {"id":"3","articleId":"7","text":"New comment","date":808099999,"author":"Greg"}
+
+Date and Time: 2024-11-24 20:24:59;
+Requested URL: /comments/create;
+Body of the Request: {"id":"3","articleId":"7","text":"New comment","date":808099999,"author":"Greg"}
+
+Date and Time: 2024-11-24 20:27:31;
+Requested URL: /;
+Body of the Request: null
+
+Date and Time: 2024-11-24 20:27:47;
+Requested URL: /comments/create;
+Body of the Request: {"id":"3","articleId":"7","text":"New comment","date":808099999,"author":"Greg"}
+
+Date and Time: 2024-11-24 20:46:52;
+Requested URL: /comments/create;
+Body of the Request: {"articleId":"7","text":"New comment","author":"Greg"}
+
+Date and Time: 2024-11-24 20:47:26;
+Requested URL: /comments/create;
+Body of the Request: {"articleId":"7","text":"New comment","author":"Greg"}
+
+Date and Time: 2024-11-24 20:49:03;
+Requested URL: /comments/create;
+Body of the Request: {"articleId":"7","text":"New comment","author":"Greg"}
+
+Date and Time: 2024-11-24 20:50:41;
+Requested URL: /comments/create;
+Body of the Request: {"articleId":"7","text":"New comment","author":"Greg"}
+
+Date and Time: 2024-11-24 20:51:44;
+Requested URL: /comments/create;
+Body of the Request: {"articleId":"7","text":"New comment","author":"Greg"}
+
+Date and Time: 2024-11-24 20:53:10;
+Requested URL: /comments/create;
+Body of the Request: {"articleId":"7","text":"New comment","author":"Mora"}
+
+Date and Time: 2024-11-24 20:53:55;
+Requested URL: /comments/create;
+Body of the Request: {"text":"New comment","author":"Mora"}
+
+Date and Time: 2024-11-24 20:55:59;
+Requested URL: /comments/create;
+Body of the Request: {"articleId":"777","text":"New comment","author":"Mora"}
+
+Date and Time: 2024-11-24 21:03:04;
+Requested URL: /comments/create;
+Body of the Request: {"articleId":"777","text":"New comment","author":"Mora"}
+
+Date and Time: 2024-11-24 21:03:31;
+Requested URL: /comments/create;
+Body of the Request: {"articleId":"4","text":"New comment","author":"Mora"}
+
+Date and Time: 2024-11-24 21:03:47;
+Requested URL: /comments/create;
+Body of the Request: {"articleId":"4","text":"New comment","author":"Mora"}
+
+Date and Time: 2024-11-24 21:04:17;
+Requested URL: /comments/create;
+Body of the Request: {"articleId":"4","text":"New comment","author":"Mora"}
+
+Date and Time: 2024-11-24 21:04:55;
+Requested URL: /comments/create;
+Body of the Request: {"articleId":"7","text":"New comment","author":"Kate"}
+
+Date and Time: 2024-11-24 21:05:02;
+Requested URL: /comments/create;
+Body of the Request: {"articleId":"7","text":"New comment","author":"Greg"}
+

@@ -18,6 +18,10 @@ function getArticles() {
   return articles;
 }
 
+function setArticles(newArticles) {
+  articles = newArticles;
+}
+
 function saveArticles() {
   fs.writeFile('articles.json', JSON.stringify(articles, null, 2), (err) => {
     if (err) {
@@ -74,4 +78,4 @@ function deleteArticle(id) {
   articles = articles.filter((item) => item.id !== id);
 }
 
-module.exports = { loadArticles, getArticles, saveArticles, createArticle, getArticle, updateArticle, deleteArticle };
+module.exports = { loadArticles, getArticles, setArticles, saveArticles, createArticle, getArticle, updateArticle, deleteArticle };
