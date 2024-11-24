@@ -341,3 +341,23 @@ Date and Time: 2024-11-24 19:33:49;
 Requested URL: /articles/update;
 Body of the Request: {"id":"555","author":"Kate"}
 
+Date and Time: 2024-11-24 19:50:21;
+Requested URL: /articles/delete;
+Body of the Request: {"id":"2"}
+
+Date and Time: 2024-11-24 19:51:30;
+Requested URL: /articles/readall;
+Body of the Request: {"id":"2"}
+
+Date and Time: 2024-11-24 19:52:22;
+Requested URL: /articles/delete;
+Body of the Request: {"id":2}
+
+Date and Time: 2024-11-24 19:52:35;
+Requested URL: /articles/delete;
+Body of the Request: {"id":"555"}
+
+Date and Time: 2024-11-24 19:53:08;
+Requested URL: /articles/delete;
+Body of the Request: {"id":"555"}
+

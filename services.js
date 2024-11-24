@@ -70,4 +70,8 @@ function updateArticle(id, requestBody) {
   return article;
 }
 
-module.exports = { loadArticles, getArticles, saveArticles, createArticle, updateArticle };
+function deleteArticle(id) {
+  articles = articles.filter((item) => item.id !== id);
+}
+
+module.exports = { loadArticles, getArticles, saveArticles, createArticle, getArticle, updateArticle, deleteArticle };

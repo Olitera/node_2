@@ -4,6 +4,7 @@ const articleReadallController = require('./controllers/articlesReadall-controll
 const articleReadController = require('./controllers/articlesRead-controller');
 const articleCreateController = require('./controllers/articlesCreate-controller');
 const articleUpdateController = require('./controllers/articlesUpdate-controller');
+const articleDeleteController = require('./controllers/articlesDelete-controller');
 const sumController = require('./controllers/sum-controller');
 const notFoundController = require('./controllers/notFound-controller');
 const services = require('./services');
@@ -18,7 +19,8 @@ const handlers = {
   '/articles/readall': articleReadallController.getArticles,
   '/articles/read': articleReadController.getArticleById,
   '/articles/create': articleCreateController.createArticle,
-  '/articles/update': articleUpdateController.updateArticle
+  '/articles/update': articleUpdateController.updateArticle,
+  '/articles/delete': articleDeleteController.deleteArticle
 };
 
 const server = http.createServer((req, res) => {
