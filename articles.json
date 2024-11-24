@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "title": "Sample Article",
+    "text": "This is a sample article.",
+    "date": 1698230400000,
+    "author": "Author Name",
+    "comments": [
+      {
+        "id": "101",
+        "articleId": "1",
+        "text": "This is a sample comment.",
+        "date": 1698230500000,
+        "author": "Commenter Name"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Another Article",
+    "text": "This is another article.",
+    "date": 1698230600000,
+    "author": "Author Name",
+    "comments": []
+  }
+]
