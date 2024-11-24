@@ -6,11 +6,11 @@ const articleCreateController = require('./controllers/articles-controllers/arti
 const articleUpdateController = require('./controllers/articles-controllers/articlesUpdate-controller');
 const articleDeleteController = require('./controllers/articles-controllers/articlesDelete-controller');
 const commentCreateController = require('./controllers/comments-controllers/commentsCreate-controller');
+const commentDeleteController = require('./controllers/comments-controllers/commentsDelete-controller');
 const sumController = require('./controllers/sum-controller');
 const notFoundController = require('./controllers/notFound-controller');
 const articlesServices = require('./services/articles-services');
 const logger = require('./logger');
-
 
 const hostname = '127.0.0.1';
 const port = 3000;
@@ -22,7 +22,8 @@ const handlers = {
   '/articles/create': articleCreateController.createArticle,
   '/articles/update': articleUpdateController.updateArticle,
   '/articles/delete': articleDeleteController.deleteArticle,
-  '/comments/create': commentCreateController.createComment
+  '/comments/create': commentCreateController.createComment,
+  '/comments/delete': commentDeleteController.deleteComment
 };
 
 const server = http.createServer((req, res) => {
@@ -59,7 +60,3 @@ function startServer() {
 function getHandler(url) {
   return handlers[url] || notFoundController.notFound;
 }
-
-
-
-

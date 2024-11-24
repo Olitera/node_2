@@ -1,16 +1,16 @@
 const services = require('../../services/articles-services');
 
-function updateArticle(req, res, params) {
+function updateArticle(req, res, payload) {
   res.setHeader('Content-Type', 'application/json');
 
   try {
-    const { id } = params;
+    const { id } = payload;
 
     if (!id || typeof id !== 'string') {
       throw new Error('Request invalid');
     }
 
-    const article = services.updateArticle(id, params);
+    const article = services.updateArticle(id, payload);
 
     if (!article) {
       res.statusCode = 404;

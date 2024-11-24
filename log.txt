@@ -433,3 +433,19 @@ Date and Time: 2024-11-24 21:05:02;
 Requested URL: /comments/create;
 Body of the Request: {"articleId":"7","text":"New comment","author":"Greg"}
 
+Date and Time: 2024-11-24 21:24:43;
+Requested URL: /comments/create;
+Body of the Request: {"articleId":"7","text":"New comment","author":"Greg"}
+
+Date and Time: 2024-11-24 21:25:17;
+Requested URL: /comments/delete;
+Body of the Request: {"id":"104"}
+
+Date and Time: 2024-11-24 21:25:51;
+Requested URL: /comments/delete;
+Body of the Request: {"o":"104"}
+
+Date and Time: 2024-11-24 21:26:19;
+Requested URL: /comments/delete;
+Body of the Request: {"id":"1000000"}
+

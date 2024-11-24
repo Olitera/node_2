@@ -1,24 +1,24 @@
 const commentsServices = require('../../services/comments-services');
 const articlesServices = require('../../services/articles-services');
 
-function createComment(req, res, payload) {
+function deleteComment(req, res, payload) {
   res.setHeader('Content-Type', 'application/json');
 
   try {
-    const { articleId } = payload;
+    const { id } = payload;
 
-    if (!articleId || typeof articleId !== 'string') {
+    if (!id || typeof id !== 'string') {
       throw new Error('Request invalid');
     }
 
-    const comment = commentsServices.createComment(payload);
-    const article = articlesServices.getArticle(articleId);
+    const comment = commentsServices.getComment(id);
 
-    if (!article) {
+    if (!comment) {
       res.statusCode = 404;
-      res.end(JSON.stringify({ code: 404, message: 'Article with this id not found' }));
+      res.end(JSON.stringify({ code: 404, message: 'Comment not found' }));
     } else {
-      res.end(JSON.stringify(comment));
+      commentsServices.deleteComment(id);
+      res.end(JSON.stringify({ code: 200, message: 'OK' }));
     }
   } catch (err) {
     res.statusCode = 400;
@@ -27,4 +27,4 @@ function createComment(req, res, payload) {
   articlesServices.saveArticles();
 }
 
-module.exports = { createComment };
+module.exports = { deleteComment };

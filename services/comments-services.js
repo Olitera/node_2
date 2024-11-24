@@ -6,6 +6,10 @@ function getComments() {
     .reduce((acc, item) => [...acc, ...item.comments], []);
 }
 
+function getComment(id) {
+  return getComments().find((item) => item.id === id);
+}
+
 function createComment( commentData) {
   const articles = articlesServices.getArticles();
   const comment = {
@@ -34,6 +38,20 @@ function getNewCommentId() {
   })[0]?.id || 0) + 1);
 }
 
+function deleteComment(id) {
+  const articles = articlesServices.getArticles();
+
+  articlesServices.setArticles(articles.map((item) => {
+    if (item.comments) {
+      item.comments = item.comments.filter((comment) => comment.id !== id);
+    }
+
+    return item;
+  }));
+}
+
 module.exports = {
+  getComment,
   createComment,
+  deleteComment
 };

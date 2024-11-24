@@ -1,10 +1,10 @@
 const services = require('../../services/articles-services');
 
-function getArticleById(req, res, params) {
+function getArticleById(req, res, payload) {
   res.setHeader('Content-Type', 'application/json');
 
   try {
-    const { id } = params;
+    const { id } = payload;
 
     if (!id || typeof id !== 'string') {
       throw new Error('Invalid id');

@@ -1,10 +1,10 @@
 const services = require('../../services/articles-services');
 
-function deleteArticle(req, res, params) {
+function deleteArticle(req, res, payload) {
   res.setHeader('Content-Type', 'application/json');
 
   try {
-    const { id } = params;
+    const { id } = payload;
 
     if (!id || typeof id !== 'string') {
       throw new Error('Request invalid');
